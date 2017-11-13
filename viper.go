@@ -667,6 +667,18 @@ func (v *Viper) GetInt64(key string) int64 {
 	return cast.ToInt64(v.Get(key))
 }
 
+// GetUint returns the value associated with the key as an 32 bit unsigned integer.
+func GetUint(key string) uint { return v.GetUint(key) }
+func (v *Viper) GetUint(key string) uint {
+	return cast.ToUint(v.Get(key))
+}
+
+// GetUint64 returns the value associated with the key as an 64 bit unsigned integer.
+func GetUint64(key string) uint64 { return v.GetUint64(key) }
+func (v *Viper) GetUint64(key string) uint64 {
+	return cast.ToUint64(v.Get(key))
+}
+
 // GetFloat64 returns the value associated with the key as a float64.
 func GetFloat64(key string) float64 { return v.GetFloat64(key) }
 func (v *Viper) GetFloat64(key string) float64 {
